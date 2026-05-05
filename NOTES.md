@@ -28,7 +28,7 @@
    Toolbar button clears the range; **Escape** also clears selection when no tooltip is open.
 
 10. **Tests**  
-    Vitest + jsdom: `eachOccupiedNight`, `minKey`/`maxKey` span, `monthGridNeighborIndex`, `eachDayInCalendarYear` (incl. leap year), `addDays`, and `bookingOverlapsNightRange`. Run `npm run test`.
+    Vitest + jsdom: `eachOccupiedNight`, `minKey`/`maxKey` span, `monthGridNeighborIndex`, `eachDayInCalendarYear` (incl. leap year), `eachDayInMonth`, `addDays`, and `bookingOverlapsNightRange`; plus `CalendarGrid.integration.test.tsx` (grid `aria-*` indices, keyboard in `dir="rtl"`). Run `npm run test`.
 
 ## Trade-offs
 

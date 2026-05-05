@@ -18,7 +18,7 @@ describe("CalendarGrid integration", () => {
         onHover={noopHover}
       />,
     );
-    const [grid] = screen.getAllByRole("grid");
+    const grid = screen.getAllByRole("grid").at(-1)!;
     const cells = within(grid).getAllByRole("gridcell");
     expect(cells.length).toBeGreaterThan(30);
     expect(cells[0].getAttribute("aria-rowindex")).toBe("1");
@@ -44,7 +44,7 @@ describe("CalendarGrid integration", () => {
         />
       </div>,
     );
-    const [grid] = screen.getAllByRole("grid");
+    const grid = screen.getAllByRole("grid").at(-1)!;
     const focusCell = within(grid).getAllByRole("gridcell").find((el) => el.tabIndex === 0);
     expect(focusCell).toBeTruthy();
     const el = focusCell as HTMLElement;
