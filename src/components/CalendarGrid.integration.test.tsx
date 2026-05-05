@@ -1,5 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { CalendarGrid } from "./CalendarGrid";
 
@@ -29,8 +28,7 @@ describe("CalendarGrid integration", () => {
     expect(cells[8].getAttribute("aria-colindex")).toBe("2");
   });
 
-  it("updates selection from ArrowRight when wrapped in dir=rtl", async () => {
-    const user = userEvent.setup();
+  it("updates selection from ArrowRight when wrapped in dir=rtl", () => {
     const onSelectionChange = vi.fn();
     render(
       <div dir="rtl">
@@ -49,8 +47,10 @@ describe("CalendarGrid integration", () => {
     const [grid] = screen.getAllByRole("grid");
     const focusCell = within(grid).getAllByRole("gridcell").find((el) => el.tabIndex === 0);
     expect(focusCell).toBeTruthy();
-    (focusCell as HTMLElement).focus();
-    await user.keyboard("{ArrowRight}");
+    const el = focusCell as HTMLElement;
+    el.focus();
+    expect(document.activeElement).toBe(el);
+    fireEvent.keyDown(el, { key: "ArrowRight", shiftKey: false });
     expect(onSelectionChange).toHaveBeenCalledTimes(1);
     const arg = onSelectionChange.mock.calls[0][0] as { start: string; end: string };
     expect(arg.start).toBe(arg.end);
