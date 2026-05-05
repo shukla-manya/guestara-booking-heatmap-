@@ -82,7 +82,7 @@ export const BookingPanel = forwardRef<HTMLElement, BookingPanelProps>(function 
       ) : null}
 
       {selection && rows.length > 0 ? (
-        <div style={{ overflowX: "auto" }}>
+        <div className="panel__table-scroll">
           <table className="table">
             <thead>
               <tr>

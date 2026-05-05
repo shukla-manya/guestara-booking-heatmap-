@@ -196,7 +196,7 @@ export function App() {
       </header>
 
       <div className="app__body">
-        <section className="card" style={{ overflow: "hidden" }}>
+        <section className="card card--main">
           <div className="toolbar">
             <div className="toolbar__left">
               <div className="toolbar__month">{monthLabel(ym.year, ym.monthIndex)}</div>
