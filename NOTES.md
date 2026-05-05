@@ -42,9 +42,3 @@ Engineering and product notes for this repo. For **setup, folder layout, and how
 - **StrictMode** in dev may double-fetch JSON; production is single fetch.
 - **Year strip** — search highlights are month-only; year view is occupancy-only (keeps scope small).
 - **Rooms timeline** — same search/month highlight rule as year (month grid owns search UX); overlapping same-room stays in one month are rare in mock data—bars are not lane-stacked.
-
-## Future ideas
-
-- Persist toolbar view mode (e.g. `guestara:view-v1`) if product wants continuity across reloads.
-- Configurable week start (locale) with matching `aria-colindex` / weekday header order.
-- Deeper a11y for Rooms timeline (e.g. `role="table"` or list semantics + keyboard focus on bars).
