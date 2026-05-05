@@ -1,0 +1,27 @@
+:root {
+  color-scheme: dark;
+  --bg: #070b14;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --radius: 14px;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Monaco, monospace;
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.45;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 800px at 20% 0%, #0f1b33, var(--bg));
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+}
