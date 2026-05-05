@@ -40,6 +40,6 @@
 
 ## With more time
 
-- Full `aria` row/column indices for the grid.
-- Gantt or room-row timeline view.
-- More integration tests (e.g. keyboard + selection in RTL).
+- ~~Full `aria` row/column indices for the grid.~~ Done (`aria-rowindex` / `aria-colindex` on month `gridcell`s).
+- ~~Gantt or room-row timeline view.~~ Done: **Rooms** toolbar view — one row per room, month days as columns, stay bars clipped to the visible month (respects filter chips).
+- ~~More integration tests (e.g. keyboard + selection in RTL).~~ Done: `CalendarGrid.integration.test.tsx` (indices + `ArrowRight` inside `dir="rtl"`).
