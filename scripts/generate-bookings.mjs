@@ -4,7 +4,6 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roomTypes = ["standard", "deluxe", "suite"];
 const sources = ["direct", "ota", "corporate", "walk_in"];
-
 function pad(n) {
   return String(n).padStart(2, "0");
 }
