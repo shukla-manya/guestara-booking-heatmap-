@@ -16,7 +16,6 @@ import { computeMonthStats } from "./lib/monthStats";
 import { mostBookedRoomTypeInMonth } from "./lib/roomTypeMonth";
 import { roomTypeLabel } from "./lib/labels";
 type HoverTip = { x: number; y: number; title: string; sub: string };
-
 type ViewMode = "month" | "year" | "rooms";
 
 function AppFooter() {
