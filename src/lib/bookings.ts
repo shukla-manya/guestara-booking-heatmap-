@@ -1,6 +1,5 @@
 import type { Booking, DateKey, FilterState } from "../types";
 import { compareKeys } from "./dates";
-
 export function bookingOverlapsNightRange(
   b: Booking,
   start: DateKey,
