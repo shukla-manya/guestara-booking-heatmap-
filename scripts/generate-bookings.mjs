@@ -7,7 +7,6 @@ const sources = ["direct", "ota", "corporate", "walk_in"];
 function pad(n) {
   return String(n).padStart(2, "0");
 }
-
 function toKey(y, m, d) {
   return `${y}-${pad(m)}-${pad(d)}`;
 }
