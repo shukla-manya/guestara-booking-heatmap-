@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import { todayYM } from "../lib/dates";
-
 const KEY = "guestara:calendar-month";
 
 type YM = { year: number; monthIndex: number };
