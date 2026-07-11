@@ -11,7 +11,6 @@ import {
   ALL_STATUSES,
   defaultFilterState,
 } from "../types";
-
 const KEY = "guestara:filters-v1";
 
 function cloneFilters(f: FilterState): FilterState {
